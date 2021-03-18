@@ -1,0 +1,15 @@
+version: "2"
+services:
+  izanagi:
+    build: .
+    volumes:
+      - .:/var/www/app
+    depends_on:
+      - splash
+  splash:
+    image: scrapinghub/splash:3.2
+    command: --maxrss 4096 --max-timeout 300
+    ports:
+      - "8050:8050"
+    mem_limit: 4608M
+    restart: on-failure
