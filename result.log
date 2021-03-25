@@ -1,0 +1,620 @@
+2021-03-25 10:47:08 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: notify)
+2021-03-25 10:47:08 [scrapy.utils.log] INFO: Versions: lxml 4.6.2.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.2.0, Python 3.6.6 (default, Oct 16 2018, 07:17:20) - [GCC 6.3.0 20170516], pyOpenSSL 20.0.1 (OpenSSL 1.1.1j  16 Feb 2021), cryptography 3.4.6, Platform Linux-4.19.76-linuxkit-x86_64-with-debian-9.5
+2021-03-25 10:47:08 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'notify', 'DOWNLOAD_DELAY': 3, 'DUPEFILTER_CLASS': 'scrapy_splash.SplashAwareDupeFilter', 'FEED_FORMAT': 'json', 'FEED_URI': 'result.json', 'HTTPCACHE_STORAGE': 'scrapy_splash.SplashAwareFSCacheStorage', 'LOG_FILE': 'result.log', 'NEWSPIDER_MODULE': 'notify.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['notify.spiders']}
+2021-03-25 10:47:08 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2021-03-25 10:47:08 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy_splash.SplashCookiesMiddleware',
+ 'scrapy_splash.SplashMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-03-25 10:47:08 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'notify.middlewares.NotifySpiderMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-03-25 10:47:08 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2021-03-25 10:47:08 [scrapy.core.engine] INFO: Spider opened
+2021-03-25 10:47:08 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-03-25 10:47:08 [notify_spider] INFO: Spider opened: notify_spider
+2021-03-25 10:47:08 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2021-03-25 10:47:09 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://python.org/robots.txt> from <GET http://python.org/robots.txt>
+2021-03-25 10:47:12 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.python.org/robots.txt> from <GET https://python.org/robots.txt>
+2021-03-25 10:47:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.python.org/robots.txt> (referer: None)
+2021-03-25 10:47:19 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://python.org/jobs/> from <GET http://python.org/jobs/>
+2021-03-25 10:47:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.python.org/jobs/> from <GET https://python.org/jobs/>
+2021-03-25 10:47:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.python.org/robots.txt> (referer: None)
+2021-03-25 10:47:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.python.org/jobs/> (referer: None)
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    Preply (edTech)\n                ',
+ 'location': 'Barcelona, Spain',
+ 'title': 'Software Engineer'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    Fininfocom\n                ',
+ 'location': 'Hyderabad, Telangana, India',
+ 'title': 'Python Developer'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    Virtasant\n                ',
+ 'location': 'Remote, Remote, Remote',
+ 'title': 'Senior AWS Python Developer'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    Total Ticketing Limited\n                ',
+ 'location': 'Hong Kong, Hong Kong',
+ 'title': 'Senior Python/Django Devloper'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    Setu\n                ',
+ 'location': 'Bangalore, Karnataka, India',
+ 'title': 'Full Stack Engineer'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    By Light Professional IT Services\n                ',
+ 'location': 'San Antonio, TX, US',
+ 'title': 'Python Developer'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    Neyo IT\n                ',
+ 'location': 'Amsterdam, Netherlands',
+ 'title': 'Python Developer - Vue.js - Netherlands'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    Freedom Financial Network\n                ',
+ 'location': 'San Mateo, California, United States',
+ 'title': 'Staff Data Engineer (2 Positions Open!!)'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    Flanks\n                ',
+ 'location': 'Barcelona, Catalonia, Spain',
+ 'title': 'Python Developer'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    DomainsBot.com\n                ',
+ 'location': 'Remote, Remote, Remote',
+ 'title': 'Backend Python Developer for Distributed Company'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    Pinnacol Assurance\n                ',
+ 'location': 'Denver, CO, United States',
+ 'title': 'Senior QA Engineer'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n'
+            '\t\t    Delft University of Technology (TU Delft)\n'
+            '                ',
+ 'location': 'Delft, Netherlands',
+ 'title': 'Developer of Open Science Data Infrastructures'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    CANOPY ONE\n                ',
+ 'location': 'Denver, Colorado, United States',
+ 'title': 'PYTHON FULLSTACK DEVELOPER'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    Canopyone\n                ',
+ 'location': 'Denver, Colorado, USA',
+ 'title': 'Python Fullstack Developer'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    e-Frontiers\n                ',
+ 'location': 'Dublin, Dublin, Ireland',
+ 'title': 'Python Developer'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    Stealth (InsurTech) / Funded\n                ',
+ 'location': 'London, London, UK',
+ 'title': 'Tech Lead (Full stack)'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    Koffie Labs\n                ',
+ 'location': 'New York / Remote, Remote',
+ 'title': 'Data + Software Engineer (2-5 yrs exp)'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    techfolk Ltd\n                ',
+ 'location': 'Cambridge, ENG, United Kingdom',
+ 'title': 'Senior Engineer: building SDK, tools and integrations for ML'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    techfolk Ltd\n                ',
+ 'location': 'Bristol, ENG, United Kingdom',
+ 'title': 'Senior Engineer: building SDK, tools and integrations for ML'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    Technical Integrity\n                ',
+ 'location': 'Boulder (remote), Colorado (remote), USA',
+ 'title': 'Python Architect / Principal Python Engineer for Pre-IPO Company'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    Powerlytics\n                ',
+ 'location': 'Philadelphia, PA, United States',
+ 'title': 'Principal Data Engineer'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    Mapbox\n                ',
+ 'location': 'San Francisco, Washington D.C., Remote, United States',
+ 'title': 'Geospatial Software Engineer, Imagery Team'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    Stylight GmbH\n                ',
+ 'location': 'München, Bavaria, Germany',
+ 'title': 'Software Engineer - Backend (d/f/m)'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    CMCC Foundation\n                ',
+ 'location': 'Lecce, Italy',
+ 'title': 'Scientific Software Developer'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/>
+{'company': '\n\t\t    Galway-Mayo Institute of Technology\n                ',
+ 'location': 'Galway, Ireland',
+ 'title': 'PhD in Machine Learning for Biomedical Applications'}
+2021-03-25 10:47:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.python.org/jobs/?page=2> (referer: https://www.python.org/jobs/)
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Pinogy Corp\n                ',
+ 'location': 'Herndon, VA, USA',
+ 'title': 'Full Stack Python Developer'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Invisible Technologies\n                ',
+ 'location': 'Remote, Remote, Remote',
+ 'title': 'Agent: Software Engineer'}
+2021-03-25 10:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Freedom Financial Network\n                ',
+ 'location': 'San Mateo, California, United States',
+ 'title': 'Sr or Lead Python Developer'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Cars and Bids LLC\n                ',
+ 'location': 'San Diego, CA, United States',
+ 'title': 'Senior Backend Software Engineer - Cars & Bids'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    hXe, LLC\n                ',
+ 'location': 'Los Angeles, CA, United States',
+ 'title': 'Full Stack Python Flask Web Developer (Full Time - Remote)'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Kinaxis\n                ',
+ 'location': 'Toronto, Ontario, Canada',
+ 'title': 'Senior Software Developer (ML Platform)'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Reef Technologies\n                ',
+ 'location': 'Warszawa, Poland',
+ 'title': '(No CV) Senior Python Engineer, 30h/week, fully remote'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Shuup Commerce Inc\n                ',
+ 'location': 'Santa Monica, California, United States',
+ 'title': 'Senior Python Full Stack Developer'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Qssot Technologies Pvt Ltd\n                ',
+ 'location': 'Bangalore, Karnataka, India',
+ 'title': 'Python Code - Challenge taker'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Kinaxis\n                ',
+ 'location': 'Toronto, Ontario, Canada',
+ 'title': 'Principal Developer, Analytics Solutions'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Modus Create\n                ',
+ 'location': 'Remote, LATAM',
+ 'title': 'Back End Engineer - (Python, Node)'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Saber Astronautics\n                ',
+ 'location': 'Adelaide, SA, Australia',
+ 'title': 'Space Engineer - Data'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Catchafire\n                ',
+ 'location': 'New York, NY, USA',
+ 'title': 'Senior Software Engineer (Remote)'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Pi school\n                ',
+ 'location': 'ROMA, ROMA, Italy',
+ 'title': 'AI Training for free (not volunteering\xa0position) with PYTHON'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    pymetrics\n                ',
+ 'location': 'New York (Remote), New York, USA',
+ 'title': 'Python Developer, Client Analytics'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Aiven\n                ',
+ 'location': 'remote Germany, Germany, Germany',
+ 'title': 'Senior Software Engineer in Testing'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Aiven\n                ',
+ 'location': 'remote Europe, Europe',
+ 'title': 'Senior/Lead Python Backend Developer'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Susan Rule Consulting\n                ',
+ 'location': 'COLCHESTER, Essex, United Kingdom',
+ 'title': 'Backend Developer (Mid Level)'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Consumeraffairs\n                ',
+ 'location': 'International, International, International',
+ 'title': 'Remote - Python/Backend Developer'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    RegAlytics\n                ',
+ 'location': 'New York (Remote), New York, United States',
+ 'title': 'Full Stack Developer (Django, Vue.js)'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Aiven\n                ',
+ 'location': 'Sydney, New South Wales, Australia',
+ 'title': 'Software Developer, Security'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    World News Inc\n                ',
+ 'location': 'International, Leicestershire, International',
+ 'title': 'Full Stack developer'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    Copious Software\n                ',
+ 'location': 'Remote, India, India',
+ 'title': 'Python developer'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n\t\t    ASPER BROTHERS\n                ',
+ 'location': 'Warsaw, Mazowieckie, Poland',
+ 'title': 'Python Developer'}
+2021-03-25 10:47:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=2>
+{'company': '\n'
+            '\t\t    National Astronomical Observatory of Japan\n'
+            '                ',
+ 'location': 'HILO, Hawaii, United States',
+ 'title': 'PFS INSTRUMENTATION SOFTWARE ENGINEER – ID# 221091'}
+2021-03-25 10:47:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.python.org/jobs/?page=3> (referer: https://www.python.org/jobs/?page=2)
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    Bairesdev LLC\n                ',
+ 'location': 'LATAM, Remote',
+ 'title': 'Python Architect'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    BairesDev LLC\n                ',
+ 'location': 'LATAM, Remote',
+ 'title': 'Python Developer'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    Backtracks.fm\n                ',
+ 'location': 'Remote, Worldwide',
+ 'title': 'Senior Python Developer - Fullstack'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    WPMU DEV\n                ',
+ 'location': 'Remote - Work From Anywhere!, South America',
+ 'title': 'Python Developer'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    Pinnacol Assurance\n                ',
+ 'location': 'Denver, CO, United States',
+ 'title': 'Software Engineer - Integrations (Contract)'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    IETF Administration LLC\n                ',
+ 'location': 'Global, Global',
+ 'title': 'Senior Software Development Engineer'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    OceanBarn LLC\n                ',
+ 'location': 'Boston, MA, USA',
+ 'title': 'Full Stack Django Developer for ArtsDesire KickStarter'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    Nay Day LLC\n                ',
+ 'location': 'Orange Park, Florida, United States',
+ 'title': 'Python Twitter Bot'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    Zero Deposit\n                ',
+ 'location': 'London, UK',
+ 'title': 'Lead Engineer'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    Wolt\n                ',
+ 'location': 'Helsinki or fully remote from elsewhere in Finland, Germany, '
+             'Denmark or Estonia, Finland, Germany, Denmark, Estonia',
+ 'title': 'Backend Engineer'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    Profil Software\n                ',
+ 'location': 'Gdynia, Polska, Polska',
+ 'title': 'Mid/Senior Python Developer'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n'
+            '\t\t    Assosiation of Rational  Enterprise, LLC\n'
+            '                ',
+ 'location': 'London, United Kingdom',
+ 'title': 'Part-Time Python Web Developer'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    UK Resource\n                ',
+ 'location': 'fully remote, VI, fully remote',
+ 'title': 'Senior Python\xa0developer for a 3D simulation app'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n'
+            '\t\t    Galway-Mayo Institute of  Technology (GMIT)\n'
+            '                ',
+ 'location': 'Galway, Galway, Ireland',
+ 'title': 'PhD Scholarship: Machine Learning for prediction of climate change'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    MedSec\n                ',
+ 'location': 'Miami Beach (Remote), Florida, USA',
+ 'title': 'Full Stack Developer'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    Your African Safari\n                ',
+ 'location': 'Remote, Remote, Remote',
+ 'title': 'Entrepreneurial Python | Django Developer'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    Qotto\n                ',
+ 'location': 'Remote, Remote',
+ 'title': 'SOFTWARE DEVELOPER (PYTHON) - Remote'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    KU Leuven\n                ',
+ 'location': 'Leuven, Flemish Brabant, Belgium',
+ 'title': 'Backend Software Developer to build scientific web applications'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    Fortinet\n                ',
+ 'location': 'Chicago, IL, United States',
+ 'title': 'Senior Software Dev QA Engineer'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    Fortinet\n                ',
+ 'location': 'Chicago, IL, United States',
+ 'title': 'Senior Software Development Developer'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    Modus Create\n                ',
+ 'location': 'Remote, Latin America',
+ 'title': 'Full Stack Engineer - (Python, Node, React, Typescript)'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    Modus Create\n                ',
+ 'location': 'Remote, Latin America',
+ 'title': 'Full Stack Engineer (React, Python)'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    aprawa\n                ',
+ 'location': 'Remote (Europe / North America), United States',
+ 'title': '[Remote] Software Engineer | Algorithmic Trading'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    Agot AI\n                ',
+ 'location': 'Remote, USA',
+ 'title': 'DevOps Engineer'}
+2021-03-25 10:47:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=3>
+{'company': '\n\t\t    Glencoe Software\n                ',
+ 'location': 'remote, United Kingdom',
+ 'title': 'Biological Data Science Specialist'}
+2021-03-25 10:47:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.python.org/jobs/?page=4> (referer: https://www.python.org/jobs/?page=3)
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    VMware\n                ',
+ 'location': 'Remote, Europe',
+ 'title': 'Open Source Engineer'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    Solarisbank AG\n                ',
+ 'location': 'Kyiv, Ukraine',
+ 'title': '(Senior) Python Engineer (m/f/div)'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    Active Prime\n                ',
+ 'location': 'Mountain View, California, United States',
+ 'title': 'Senior Backend Python Developer (Feb 18,2021)'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    AlayaCare\n                ',
+ 'location': 'Montreal, Quebec, Canada',
+ 'title': 'Senior Developer'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    Media Predict Inc.\n                ',
+ 'location': 'Remote (EST, CST or MST), NY, United States',
+ 'title': 'Senior Full Stack Engineer'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    Rotki Solutions GmbH\n                ',
+ 'location': 'Berlin (and remote), Germany (and remote)',
+ 'title': 'Backend python developer'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    Penguin Random House\n                ',
+ 'location': 'New York / Remote, NY, USA',
+ 'title': 'Developer/Senior Developer'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    Truemotion\n                ',
+ 'location': 'Budapest, Hungary',
+ 'title': 'Principal Software Engineer - Data Engineering'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    Reef Technologies\n                ',
+ 'location': 'remote, Poland',
+ 'title': '🕵️\u200d♂️ (No CV) Senior Python Developer, 6h/day, full remote'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    MuckerLab\n                ',
+ 'location': 'Santa Monica, CA, USA',
+ 'title': 'Software Engineer, Full Stack'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    Bettor Believe\n                ',
+ 'location': 'London, London, United Kingdom',
+ 'title': 'Python Engineer - Machine Learning'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    commercetools\n                ',
+ 'location': 'Berlin, Germany',
+ 'title': 'Python Engineer'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    Wrike\n                ',
+ 'location': 'Prague, Czech Republic',
+ 'title': 'Senior Python developer'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    causaLens\n                ',
+ 'location': 'London, Hammersmith, UK',
+ 'title': 'Backend Engineer'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    Techunting LLC\n                ',
+ 'location': 'Buenos Aires, AR, Argentina',
+ 'title': 'Python Sr Dev with Odoo Experience'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    Muck Rack\n                ',
+ 'location': 'Remote, Remote, United States',
+ 'title': 'Senior Software Engineer (Back-End)'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    Hyperfine\n                ',
+ 'location': 'Guilford, Connecticut, United States of America',
+ 'title': 'Sr Software Engineer, PACS Interface'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    Fulfil.IO\n                ',
+ 'location': 'Bangalore, Karnataka, India',
+ 'title': 'Senior Software Engineer (Python)'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    Financial Services\n                ',
+ 'location': 'London, London, United Kingdom',
+ 'title': 'Python (Full Stack) Developer - London'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n'
+            '\t\t    Lamont-Doherty Earth Observatory of Columbia University\n'
+            '                ',
+ 'location': 'Palisades, NY, United States',
+ 'title': 'Staff Associate III'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    Sourcefabric\n                ',
+ 'location': 'Remotely, EMEA areas, Czech Republic',
+ 'title': 'Application Developer (Backend) - Superdesk'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    JLL\n                ',
+ 'location': 'Chicago, IL, United States',
+ 'title': 'Senior Data Engineer'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    Cyber-Dive Corp.\n                ',
+ 'location': 'Mesa, AZ, United States',
+ 'title': 'Senior Software Engineer'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    Horn Solutions\n                ',
+ 'location': 'Austin, Texas, United States',
+ 'title': 'Senior Python Engineer (Remote in the US)'}
+2021-03-25 10:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=4>
+{'company': '\n\t\t    EAB\n                ',
+ 'location': 'Remote, United States',
+ 'title': 'Principal Python Engineer'}
+2021-03-25 10:47:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.python.org/jobs/?page=5> (referer: https://www.python.org/jobs/?page=4)
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    EAB\n                ',
+ 'location': 'Remote, United States',
+ 'title': 'Senior Python Engineer'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Linkfire\n                ',
+ 'location': 'Copenhagen, Denmark, Denmark',
+ 'title': 'Python Engineer'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Extreme Engineering Solutions\n                ',
+ 'location': 'Madison, Wisconsin, USA',
+ 'title': 'Senior Python Developer'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Replicon\n                ',
+ 'location': 'Bangalore, Karnataka, India',
+ 'title': 'Python Developer'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Nimbus Team, University of Chicago\n                ',
+ 'location': 'Chicago, Illinois, United States of America',
+ 'title': 'Junior Software Engineer'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Nimbus Team, University of Chicago\n                ',
+ 'location': 'Chicago, Illinois, United States of America',
+ 'title': 'Senior Software Developer'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Argus TrueID\n                ',
+ 'location': 'Working from home, United Kingdom',
+ 'title': '3 x Senior Full stack Python Developers'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    der Freitag Mediengesellschaft\n                ',
+ 'location': 'Berlin, Berlin, Germany',
+ 'title': '2x Web developer (m/f/d)'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Faraday\n                ',
+ 'location': 'Burlington, VT, VT, US',
+ 'title': 'Python/Rust/distributed SQL in Vermont (& Boston)'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Jina AI GmbH\n                ',
+ 'location': 'Berlin or remote, Berlin, Germany',
+ 'title': 'Python Backend Engineer'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Stylight GmbH\n                ',
+ 'location': 'München, Bavaria, Germany',
+ 'title': 'Full Stack Engineer - Python/JS (d/f/m)'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Chewy.com\n                ',
+ 'location': 'Dania Beach, Florida, United States',
+ 'title': 'Software Engineer'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Citizen Kind\n                ',
+ 'location': 'New York, United States',
+ 'title': 'Senior Backend Software Engineer (Django, Flask, AWS, PostgreSQL) '
+          '(Remote,US)'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Reckonsys\n                ',
+ 'location': 'Bangalore (Remote possible), Karnataka, India',
+ 'title': 'Pythonista'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Simon Data\n                ',
+ 'location': 'New York or Remote USA, NY, United States',
+ 'title': 'Senior Full Stack Engineer'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Kennedy Technologies Corp\n                ',
+ 'location': 'Lansing, Michigan, United States',
+ 'title': 'Senior Software Engineer – Lansing, MI'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Invisible Technologies\n                ',
+ 'location': 'Remote, Remote, Remote',
+ 'title': 'Agent: Python Software Engineer'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    MMS.IND\n                ',
+ 'location': 'Mumbai, Maharashtra, India',
+ 'title': 'Python Developer (Data Analyst)'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Crystal Clear Automation, LLC\n                ',
+ 'location': 'dallas / Fort Worth Area, Texas, US',
+ 'title': 'Python programer with Openscad'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Datto\n                ',
+ 'location': 'Remote, Remote, USA or Toronto Canada',
+ 'title': 'Senior Software Engineer II (P5)'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Remotesome\n                ',
+ 'location': '100% Remote, Latam or NA',
+ 'title': 'Python Engineer'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    GeBBS Consulting\n                ',
+ 'location': 'Batimore, Maryland, United States',
+ 'title': 'Senior Data Integration Engineer'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Arieli & Company\n                ',
+ 'location': 'London, United Kingdom',
+ 'title': 'Data Scientist'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Alasco GmbH\n                ',
+ 'location': 'Munich, Bavaria, Germany',
+ 'title': 'Senior Backend / Python Developer (m/f/x)'}
+2021-03-25 10:47:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=5>
+{'company': '\n\t\t    Stack Builders\n                ',
+ 'location': 'New York, NY, United States',
+ 'title': 'Full-Stack Python Developer (Remote - Full-time)'}
+2021-03-25 10:47:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.python.org/jobs/?page=6> (referer: https://www.python.org/jobs/?page=5)
+2021-03-25 10:47:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=6>
+{'company': '\n\t\t    TatvaSoft\n                ',
+ 'location': 'Ahmedabad, Gujarat, India',
+ 'title': 'Software Engineer'}
+2021-03-25 10:47:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=6>
+{'company': '\n\t\t    Citizen Kind\n                ',
+ 'location': 'Remote, US, US',
+ 'title': 'Senior Backend Software Engineer'}
+2021-03-25 10:47:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=6>
+{'company': '\n\t\t    CodePit\n                ',
+ 'location': 'Rzeszów, Poland',
+ 'title': 'Python Dev'}
+2021-03-25 10:47:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=6>
+{'company': '\n\t\t    Clariteia SL\n                ',
+ 'location': 'Madrid, Madrid, Spain',
+ 'title': 'Senior Software Engineer'}
+2021-03-25 10:47:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=6>
+{'company': '\n\t\t    Logic20/20 Consulting\n                ',
+ 'location': 'San Francisco, California, United States',
+ 'title': 'Data Engineer - Spark (Remote)'}
+2021-03-25 10:47:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=6>
+{'company': '\n\t\t    Use All Five, Inc.\n                ',
+ 'location': 'Marina Del Rey, CA, United States',
+ 'title': 'Senior Python Engineer'}
+2021-03-25 10:47:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=6>
+{'company': '\n\t\t    Global HR Consulting\n                ',
+ 'location': 'Montevideo - REMOTE WORK for an American Company, Uruguay',
+ 'title': 'Senior Python Developer'}
+2021-03-25 10:47:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.python.org/jobs/?page=6>
+{'company': '\n\t\t    HELOGENIKA LLC\n                ',
+ 'location': 'Dexter, Michigan, United States',
+ 'title': 'Python Programmer'}
+2021-03-25 10:47:42 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.python.org/jobs/?page=6> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2021-03-25 10:47:42 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-03-25 10:47:42 [scrapy.extensions.feedexport] INFO: Stored json feed (133 items) in: result.json
+2021-03-25 10:47:42 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 2878,
+ 'downloader/request_count': 12,
+ 'downloader/request_method_count/GET': 12,
+ 'downloader/response_bytes': 523259,
+ 'downloader/response_count': 12,
+ 'downloader/response_status_count/200': 8,
+ 'downloader/response_status_count/301': 4,
+ 'dupefilter/filtered': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 3, 25, 10, 47, 42, 708019),
+ 'item_scraped_count': 133,
+ 'log_count/DEBUG': 147,
+ 'log_count/INFO': 9,
+ 'memusage/max': 54837248,
+ 'memusage/startup': 54837248,
+ 'request_depth_max': 6,
+ 'response_received_count': 8,
+ 'scheduler/dequeued': 8,
+ 'scheduler/dequeued/memory': 8,
+ 'scheduler/enqueued': 8,
+ 'scheduler/enqueued/memory': 8,
+ 'start_time': datetime.datetime(2021, 3, 25, 10, 47, 8, 726476)}
+2021-03-25 10:47:42 [scrapy.core.engine] INFO: Spider closed (finished)
