@@ -47,7 +47,7 @@ DOWNLOAD_DELAY = 3
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 SPIDER_MIDDLEWARES = {
-   'notify.middlewares.NotifySpiderMiddleware': 543,
+    'notify.middlewares.NotifySpiderMiddleware': 543,
 }
 
 # Enable or disable downloader middlewares
