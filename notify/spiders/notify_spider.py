@@ -2,24 +2,17 @@
 import scrapy
 from scrapy_splash import SplashRequest
 from ..items import NotifyItem
+from ..lua_sorce import lua_source
 
 
 class NotifySpiderSpider(scrapy.Spider):
     name = 'notify_spider'
     allowed_domains = ['python.org']
     start_urls = (
-        'http://python.org/jobs/',
+        'https://lc.s.kaiyodai.ac.jp/portalv2/',
     )
 
-    script = '''
-        function main(splash, args)
-            assert(splash:go(args.url))
-            assert(splash:wait(0.5))
-            return {
-                html = splash:html()
-            }
-        end
-    '''
+    script = lua_source
 
     def start_requests(self):
         yield SplashRequest(url=self.start_urls[0],
@@ -29,15 +22,15 @@ class NotifySpiderSpider(scrapy.Spider):
 
     def parse(self, response):
         # ページ中のジョブオファー情報を全て取得
-        for i, res in enumerate(response.xpath("//h2[@class='listing-company']")):
+        for i, res in enumerate(response.xpath("//table[@id='tbl_news']//tr")):
             job = NotifyItem()
-            job["title"] = res.xpath("//span[@class='listing-company-name']/a/text()").extract()[i]
-            job["company"] = res.xpath("//span[@class='listing-company-name']/br/following-sibling::text()").extract()[i].strip()
-            job["location"] = res.xpath("//span[@class='listing-location']/a/text()").extract()[i]
+            job["alert"] = res.xpath("//td[@class='arart']//span[@class='btn_info']/a/text()").extract()[i]
+            job["day"] = res.xpath("//td[@class='day']/text()").extract()[i]
+            job["title"] = res.xpath("//td[@class='title']//a/text()").extract()[i]
             yield job
 
         # 「Next」のリンクを取得してクロールする
-        next_page = response.xpath("//li[@class='next']/a/@href").extract()
-        if next_page:
-            url = response.urljoin(next_page[0])
-            yield scrapy.Request(url, callback=self.parse)
+        # next_page = response.xpath("//li[@class='next']/a/@href").extract()
+        # if next_page:
+        #     url = response.urljoin(next_page[0])
+        #     yield scrapy.Request(url, callback=self.parse)

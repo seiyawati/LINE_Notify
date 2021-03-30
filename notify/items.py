@@ -10,6 +10,6 @@ import scrapy
 
 class NotifyItem(scrapy.Item):
     # define the fields for your item here like:
+    alert = scrapy.Field()
+    day = scrapy.Field()
     title = scrapy.Field()
-    company = scrapy.Field()
-    location = scrapy.Field()
