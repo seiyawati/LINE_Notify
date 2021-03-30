@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-# from scrapy_splash import SplashRequest
+from scrapy_splash import SplashRequest
 from ..items import NotifyItem
 
 
@@ -11,10 +11,21 @@ class NotifySpiderSpider(scrapy.Spider):
         'http://python.org/jobs/',
     )
 
-    # def start_requests(self):
-    #     yield SplashRequest(self.start_urls[0], self.parse,
-    #         args={'wait': 0.5},
-    #     )
+    script = '''
+        function main(splash, args)
+            assert(splash:go(args.url))
+            assert(splash:wait(0.5))
+            return {
+                html = splash:html()
+            }
+        end
+    '''
+
+    def start_requests(self):
+        yield SplashRequest(url=self.start_urls[0],
+                            callback=self.parse,
+                            endpoint='execute',
+                            args={'lua_source': self.script})
 
     def parse(self, response):
         # ページ中のジョブオファー情報を全て取得

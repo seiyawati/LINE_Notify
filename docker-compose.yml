@@ -6,6 +6,7 @@ services:
       - .:/var/www/app
     depends_on:
       - splash
+    network_mode: host
   splash:
     image: scrapinghub/splash:3.2
     command: --maxrss 4096 --max-timeout 300
