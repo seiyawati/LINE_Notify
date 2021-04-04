@@ -1,6 +1,6 @@
 version: "2"
 services:
-  izanagi:
+  line-notify:
     build: .
     volumes:
       - .:/var/www/app
