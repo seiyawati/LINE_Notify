@@ -42,6 +42,3 @@ class NotifySpiderSpider(scrapy.Spider):
         # if next_page:
         #     url = response.urljoin(next_page[0])
         #     yield scrapy.Request(url, callback=self.parse)
-
-# LINE Notify Token
-# Kt02ko36wiCnpCMQNGL9eKukV6Sc4cCW6VcyIL9b0uM
