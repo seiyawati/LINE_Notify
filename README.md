@@ -27,7 +27,7 @@ docker-compose up --build
 コンテナに入る
 
 ```
-dokcer-compose run line-notify bash
+docker-compose run line-notify bash
 ```
 
 クローラー開始コマンド
